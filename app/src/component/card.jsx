@@ -1,3 +1,4 @@
+import '../styles/card.css'; // Assuming you have a CSS file for card styles
 export default function Card({name,image,id,onHandleClick})
 {
     return (

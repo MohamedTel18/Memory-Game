@@ -1,0 +1,73 @@
+.card {
+    width: 200px;
+    height: 250px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0; /* Prevents cards from shrinking in horizontal layout */
+}
+
+/* Responsive card sizing for horizontal layout */
+@media (max-width: 768px) {
+    .card {
+        width: 160px;
+        height: 200px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 140px;
+        height: 180px;
+        padding: 10px;
+    }
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: linear-gradient(145deg, #f8f8f8, #e8e8e8);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: #4CAF50;
+}
+
+.card:active {
+    transform: translateY(-2px) scale(0.98);
+    transition: all 0.1s ease;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.card:hover img {
+    border-color: #4CAF50;
+    transform: scale(1.05);
+}
+
+.card h2 {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 1.2;
+}
